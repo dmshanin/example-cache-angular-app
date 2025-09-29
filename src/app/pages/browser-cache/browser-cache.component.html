@@ -1,0 +1,36 @@
+<div class="browser-cache-page">
+    <h1>Демо: Браузерное кэширование</h1>
+    <p class="description">
+      Демонстрация работы HTTP-заголовков Cache-Control и ETag
+    </p>
+    
+    <div class="button-container">
+      <app-refresh-button 
+        [loading]="loading"
+        label="Загрузить данные"
+        (onRefresh)="fetchData()"
+      ></app-refresh-button>
+      
+      <button class="secondary-btn" (click)="fetchStaticData()">
+        Загрузить статические данные
+      </button>
+    </div>
+  
+    @if (data) {
+      <app-data-display 
+        [data]="data"
+        title="Данные из API"
+        description="Посмотрите в DevTools → Network: повторные запросы могут быть from cache"
+      ></app-data-display>
+    }
+  
+    <div class="demo-info">
+      <h4>Что демонстрируем:</h4>
+      <ul>
+        <li>Заголовки Cache-Control и ETag</li>
+        <li>Статусы 200 (from cache) в DevTools</li>
+        <li>Разницу между коротким (10s) и длинным (1h) кэшированием</li>
+        <li>Ревалидацию с помощью If-None-Match</li>
+      </ul>
+    </div>
+  </div>

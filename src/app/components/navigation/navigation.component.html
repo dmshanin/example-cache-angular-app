@@ -1,0 +1,15 @@
+<nav class="nav-container">
+    <a routerLink="/" class="nav-brand">🚀 Демо кэширования</a>
+    
+    <div class="nav-links">
+      <a 
+        *ngFor="let item of navItems"
+        [routerLink]="item.path"
+        routerLinkActive="active"
+        class="nav-link"
+      >
+        {{ item.label }}
+      </a>
+    </div>
+  </nav>
+  

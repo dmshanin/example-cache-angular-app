@@ -1,0 +1,7 @@
+<button 
+  (click)="handleClick()" 
+  [disabled]="loading"
+  class="refresh-btn"
+>
+  {{ loading ? 'Загрузка...' : label }}
+</button>

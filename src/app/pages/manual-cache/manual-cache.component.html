@@ -1,0 +1,36 @@
+<div class="manual-cache-page">
+    <h1>Демо: Ручное кэширование (Map)</h1>
+    <p class="description">
+      Демонстрация паттерна "Кэширующий сервис" с использованием Map
+    </p>
+    
+    <div class="button-container">
+      <app-refresh-button 
+        [loading]="loading"
+        label="Загрузить данные"
+        (onRefresh)="fetchWithCache()"
+      ></app-refresh-button>
+      
+      <button class="secondary-btn" (click)="clearCache()">
+        Очистить кэш
+      </button>
+    </div>
+  
+    @if (data) {
+      <app-data-display 
+        [data]="data"
+        title="Данные из кэша/API"
+        description="Попробуйте нажать несколько раз - данные будут браться из кэша"
+      ></app-data-display>
+    }
+  
+    <div class="demo-info">
+      <h4>Что демонстрируем:</h4>
+      <ul>
+        <li>Кэширование в памяти приложения с помощью Map</li>
+        <li>Паттерн "Кэширующий сервис"</li>
+        <li>Ручную инвалидацию кэша</li>
+        <li>Разницу между кэшем в памяти и браузерным кэшем</li>
+      </ul>
+    </div>
+  </div>

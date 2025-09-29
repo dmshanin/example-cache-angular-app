@@ -1,0 +1,36 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-brand {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #0070f3;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #0070f3;
+  color: white;
+}
